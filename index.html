@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Valorant Agent Recommender</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
+            background-image: url("https://images.hdqwalls.com/wallpapers/valorant-logo-red-4k-tt.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
         .container {
             max-width: 400px;
             margin: 50px auto;
             padding: 20px;
-            background-color: #fff;
+            background-color: #ffffff;
             box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
+            border-color: #333;
         }
 
         h2 {
@@ -30,6 +33,7 @@
             color: #333;
             font-size: 16px;
         }
+        
 
         select {
             width: 100%;
@@ -80,16 +84,13 @@
 
     </style>
 </head>
-
-<body>
-
     <body>
         <div class="container">
             <h2>Agent Recommendation Tool</h2>
             <label for="playstyle">Select preferred playstyle:</label>
             <select id="playstyle">
                 <option value="" title="No specific playstyle preference">-- Select Playstyle --</option>
-                <option value="egal" title="No specific playstyle preference">Egal</option>
+                <option value="egal" title="No specific playstyle preference">No preference</option>
                 <option value="aggressive"
                     title="Prefers an aggressive playstyle, focusing on taking fights and engaging enemies">Aggressive
                 </option>
@@ -109,7 +110,7 @@
             <label for="role">Select preferred role:</label>
             <select id="role">
                 <option value="" title="No specific role preference">-- Select Role --</option>
-                <option value="egal" title="No specific role preference">Egal</option>
+                <option value="egal" title="No specific role preference">No preference</option>
                 <option value="duelist" title="Prefers a duelist role, focusing on fragging and aggressive entry">
                     Duelist
                 </option>
@@ -127,8 +128,6 @@
             <select id="primary-weapon">
                 <option value="" title="No specific preference for primary weapons">-- Select Primary Weapon --</option>
                 <option value="rifle" title="Prefers rifles as the primary weapon">Rifle</option>
-                <option value="submachine-gun" title="Prefers submachine guns as the primary weapon">Submachine Gun
-                </option>
                 <option value="machine-gun" title="Prefers machine guns as the primary weapon">Machine Gun</option>
                 <option value="shotgun" title="Prefers shotguns as the primary weapon">Shotgun</option>
                 <option value="sniper" title="Prefers sniper rifles as the primary weapon">Sniper</option>
@@ -138,10 +137,10 @@
             <select id="secondary-weapon">
                 <option value="" title="No specific preference for secondary weapons">-- Select Secondary Weapon --
                 </option>
-                <option value="egal" title="No specific preference for secondary weapons">Egal</option>
+                <option value="egal" title="No specific preference for secondary weapons">No preference</option>
                 <option value="pistol" title="Prefers pistols as the secondary weapon">Pistol</option>
-                <option value="shotgun" title="Prefers shotguns as the secondary weapon">Shotgun</option>
-                <option value="machine-gun" title="Prefers machine guns as the secondary weapon">Machine Gun</option>
+                <option value="shorty" title="Prefers shotguns as the secondary weapon">Shorty</option>
+                <option value="frenzy" title="Prefers machine guns as the secondary weapon">Frenzy</option>
                 <option value="ghost" title="Prefers the Ghost as the secondary weapon">Ghost</option>
                 <option value="sheriff" title="Prefers the Sheriff as the secondary weapon">Sheriff</option>
             </select>
@@ -187,7 +186,7 @@
             <select id="team-support">
                 <option value="" title="No specific preference for team support abilities">-- Select Team Support --
                 </option>
-                <option value="egal" title="No specific preference for team support abilities">Egal</option>
+                <option value="egal" title="No specific preference for team support abilities">No preference</option>
                 <option value="yes" title="Prefers agents with team support abilities">Yes</option>
                 <option value="no" title="Does not prefer agents with team support abilities">No</option>
             </select>
@@ -195,7 +194,7 @@
             <label for="skill-floor">Select preferred skill floor:</label>
             <select id="skill-floor">
                 <option value="" title="No specific preference for skill floor">-- Select Skill Floor --</option>
-                <option value="egal" title="No specific preference for skill floor">Egal</option>
+                <option value="egal" title="No specific preference for skill floor">No preference</option>
                 <option value="low" title="Prefers agents with a lower skill floor">Low</option>
                 <option value="medium" title="Prefers agents with a medium skill floor">Medium</option>
                 <option value="high" title="Prefers agents with a higher skill floor">High</option>
@@ -204,7 +203,7 @@
             <label for="mobility">Select preferred mobility:</label>
             <select id="mobility">
                 <option value="" title="No specific preference for mobility">-- Select Mobility --</option>
-                <option value="egal" title="No specific preference for mobility">Egal</option>
+                <option value="egal" title="No specific preference for mobility">No preference</option>
                 <option value="low" title="Prefers agents with low mobility">Low</option>
                 <option value="medium" title="Prefers agents with medium mobility">Medium</option>
                 <option value="high" title="Prefers agents with high mobility">High</option>
@@ -213,7 +212,7 @@
             <label for="playmaking">Select preferred playmaking:</label>
             <select id="playmaking">
                 <option value="" title="No specific preference for playmaking">-- Select Playmaking --</option>
-                <option value="egal" title="No specific preference for playmaking">Egal</option>
+                <option value="egal" title="No specific preference for playmaking">No preference</option>
                 <option value="yes" title="Prefers agents with playmaking potential">Yes</option>
                 <option value="no" title="Does not prefer agents with playmaking potential">No</option>
             </select>
@@ -225,25 +224,12 @@
         </div>
 
         <script>
-            function recommendAgent() {
-                const playstyle = document.getElementById("playstyle").value;
-                const role = document.getElementById("role").value;
-                const primaryWeapon = document.getElementById("primary-weapon").value;
-                const secondaryWeapon = document.getElementById("secondary-weapon").value;
-                const teamSupport = document.getElementById("team-support").value;
-                const skillFloor = document.getElementById("skill-floor").value;
-                const mobility = document.getElementById("mobility").value;
-                const playmaking = document.getElementById("playmaking").value;
-                const selectedAbilities = Array.from(document.querySelectorAll('input[name="ability"]:checked')).map(input => input.value);
-
-
-
                 var agentData = {
                     "Jett": {
                         "playstyle": "aggressive",
                         "role": "duelist",
                         "primaryWeapon": ["rifle", "sniper"],
-                        "secondaryWeapon": "shotgun",
+                        "secondaryWeapon": "shorty",
                         "ability": ["mobility", "smoke"],
                         "teamSupport": "no",
                         "skillFloor": "low",
@@ -279,7 +265,7 @@
                         "playstyle": "defensive",
                         "role": "controller",
                         "primaryWeapon": "rifle",
-                        "secondaryWeapon": "shotgun",
+                        "secondaryWeapon": "shorty",
                         "ability": ["smoke", "molly"],
                         "teamSupport": "yes",
                         "skillFloor": "low",
@@ -326,7 +312,7 @@
                     "Reyna": {
                         "playstyle": "aggressive",
                         "role": "duelist",
-                        "primaryWeapon": "submachine-gun",
+                        "primaryWeapon": "pistol",
                         "secondaryWeapon": "pistol",
                         "ability": "flash",
                         "teamSupport": "no",
@@ -446,53 +432,77 @@
                 };
 
                 var weights = {
-                    "playstyle": 2,
-                    "role": 1,
+                    "playstyle": 3,
+                    "role": 3,
                     "primaryWeapon": 1,
                     "secondaryWeapon": 1,
-                    "ability": 2,
-                    "teamSupport": 1,
+                    "ability": 3,
+                    "teamSupport": 2,
                     "skillFloor": 1,
                     "mobility": 1,
                     "playmaking": 1,
                 };
 
-                var highestMatchAgent = null;
-                var highestMatchPercentage = 0;
+                function recommendAgent() {
+                    const playstyle = document.getElementById("playstyle").value;
+                    const role = document.getElementById("role").value;
+                    const primaryWeapon = document.getElementById("primary-weapon").value;
+                    const secondaryWeapon = document.getElementById("secondary-weapon").value;
+                    const teamSupport = document.getElementById("team-support").value;
+                    const skillFloor = document.getElementById("skill-floor").value;
+                    const mobility = document.getElementById("mobility").value;
+                    const playmaking = document.getElementById("playmaking").value;
+                    const selectedAbilities = Array.from(document.querySelectorAll('input[name="ability"]:checked')).map(input => input.value);
 
-                for (var agent in agentData) {
+                    if (!playstyle || !role || !primaryWeapon || !secondaryWeapon || selectedAbilities.length === 0 || !teamSupport || !skillFloor || !mobility || !playmaking) {
+                    alert("Please fill out all selection parameters with at least one option selected.");
+                    return;
+                    }
+
+                    var matchPercentages = {}; // Object to store match percentages for each agent
+
+                    for (var agent in agentData) {
                     var agentDetails = agentData[agent];
                     var points = 0;
                     var totalAbilities = selectedAbilities.length;
                     var matchingAbilities = selectedAbilities.filter(ability => agentDetails.ability.includes(ability)).length;
 
                     // Calculate points based on matching abilities and non-checkbox selections
-                    points += (matchingAbilities / totalAbilities) || 0;
-                    points += (playstyle === agentDetails.playstyle ? 1 : 0);
-                    points += (role === agentDetails.role ? 1 : 0);
-                    points += (primaryWeapon === agentDetails.primaryWeapon ? 1 : 0);
-                    points += (secondaryWeapon === agentDetails.secondaryWeapon ? 1 : 0);
-                    points += (teamSupport === agentDetails.teamSupport ? 1 : 0);
-                    points += (skillFloor === agentDetails.skillFloor ? 1 : 0);
-                    points += (mobility === agentDetails.mobility ? 1 : 0);
-                    points += (playmaking === agentDetails.playmaking ? 1 : 0);
+                    points += matchingAbilities / totalAbilities || 0;
+                    points += playstyle === agentDetails.playstyle ? 1 : 0;
+                    points += role === agentDetails.role ? 1 : 0;
+                    points += primaryWeapon === agentDetails.primaryWeapon ? 1 : 0;
+                    points += secondaryWeapon === agentDetails.secondaryWeapon ? 1 : 0;
+                    points += teamSupport === agentDetails.teamSupport ? 1 : 0;
+                    points += skillFloor === agentDetails.skillFloor ? 1 : 0;
+                    points += mobility === agentDetails.mobility ? 1 : 0;
+                    points += playmaking === agentDetails.playmaking ? 1 : 0;
 
                     var matchPercentage = Math.round((points / 9) * 100); // Total number of selection criteria
 
-                    if (matchPercentage > highestMatchPercentage) {
-                    highestMatchAgent = agent;
-                    highestMatchPercentage = matchPercentage;
+                    matchPercentages[agent] = matchPercentage; // Store the match percentage for the agent
                     }
-                }
 
-                var resultDiv = document.getElementById("result");
-                resultDiv.innerHTML = "";
-                var resultHeading = document.createElement("h3");
-                resultHeading.classList.add("result-heading");
-                resultHeading.textContent = "Agent Recommendation:";
-                resultDiv.appendChild(resultHeading);
+                    // Find the highest match percentage and corresponding agent
+                    var highestMatchAgent = null;
+                    var highestMatchPercentage = 0;
 
-                if (highestMatchAgent) {
+                    for (var agent in matchPercentages) {
+                    var matchPercentage = matchPercentages[agent];
+                    if (matchPercentage > highestMatchPercentage) {
+                        highestMatchAgent = agent;
+                        highestMatchPercentage = matchPercentage;
+                    }
+                    }
+
+                    var resultDiv = document.getElementById("result");
+                    resultDiv.innerHTML = "";
+                    var resultHeading = document.createElement("h3");
+                    resultHeading.classList.add("result-heading");
+                    resultHeading.textContent = "Agent Recommendation:";
+                    resultDiv.appendChild(resultHeading);
+
+                    if (highestMatchAgent) {
                     var resultText = document.createElement("p");
                     resultText.classList.add("result-text");
                     resultText.textContent = highestMatchAgent + " " + highestMatchPercentage + "%";
@@ -502,18 +512,47 @@
                     descriptionText.classList.add("description-text");
                     descriptionText.textContent = agentData[highestMatchAgent].description;
                     resultDiv.appendChild(descriptionText);
-                } else {
+
+                    // Show second and third best matches
+                    showMatches(matchPercentages, highestMatchAgent);
+                    } else {
                     var noResultText = document.createElement("p");
                     noResultText.classList.add("result-text");
                     noResultText.textContent = "No suitable agent found.";
                     resultDiv.appendChild(noResultText);
+                    }
                 }
+
+                function showMatches(matchPercentages, highestMatchAgent) {
+                    var matchesDiv = document.getElementById("result");
+
+                    var matchesHeading = document.createElement("h3");
+                    matchesHeading.classList.add("result-heading");
+                    matchesHeading.textContent = "Next Matches:";
+                    matchesDiv.appendChild(matchesHeading);
+
+                    // Sort the match percentages in descending order
+                    var sortedMatches = Object.entries(matchPercentages).sort((a, b) => b[1] - a[1]);
+
+                    var count = 0; // Counter for the number of matches displayed
+
+                    for (var i = 0; i < sortedMatches.length; i++) {
+                        var agent = sortedMatches[i][0];
+                        var matchPercentage = sortedMatches[i][1];
+
+                        if (count >= 3) {
+                        break; // Exit the loop if the desired number of matches is reached
+                        }
+
+                        if (agent !== highestMatchAgent) {
+                        var matchText = document.createElement("p");
+                        matchText.classList.add("result-text");
+                        matchText.textContent = agent + " " + matchPercentage + "%";
+                        matchesDiv.appendChild(matchText);
+                        count++;
+                        }
+                    }
                 }
         </script>
     </body>
-
-</html>
-        </script>
-    </body>
-
 </html>
