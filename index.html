@@ -58,7 +58,8 @@
         button:hover {
             background-color: #45a049;
         }
-
+        
+        
         #result {
             margin-top: 30px;
             padding: 20px;
@@ -76,6 +77,7 @@
         .result-text {
             margin-bottom: 10px;
         }
+
     </style>
 </head>
 
@@ -240,7 +242,7 @@
                     "Jett": {
                         "playstyle": "aggressive",
                         "role": "duelist",
-                        "primaryWeapon": "rifle",
+                        "primaryWeapon": ["rifle", "sniper"],
                         "secondaryWeapon": "shotgun",
                         "ability": ["mobility", "smoke"],
                         "teamSupport": "no",
@@ -266,7 +268,7 @@
                         "role": "duelist",
                         "primaryWeapon": "rifle",
                         "secondaryWeapon": "pistol",
-                        "ability": ["fire", "flash"],
+                        "ability": ["fire", "flash", "molly", "healing"],
                         "teamSupport": "no",
                         "skillFloor": "medium",
                         "mobility": "medium",
@@ -300,7 +302,7 @@
                     "Omen": {
                         "playstyle": "balanced",
                         "role": "controller",
-                        "primaryWeapon": "submachine-gun",
+                        "primaryWeapon": "rifle",
                         "secondaryWeapon": "shorty",
                         "ability": ["teleport", "flash"],
                         "teamSupport": "yes",
@@ -445,41 +447,41 @@
 
                 var weights = {
                     "playstyle": 2,
-                    "role": 2,
+                    "role": 1,
                     "primaryWeapon": 1,
                     "secondaryWeapon": 1,
-                    "ability": 1,
+                    "ability": 2,
                     "teamSupport": 1,
                     "skillFloor": 1,
                     "mobility": 1,
                     "playmaking": 1,
                 };
 
-                var totalWeight = Object.values(weights).reduce((a, b) => a + b, 0);
-
                 var highestMatchAgent = null;
                 var highestMatchPercentage = 0;
 
                 for (var agent in agentData) {
                     var agentDetails = agentData[agent];
-                    var distance = 0;
+                    var points = 0;
+                    var totalAbilities = selectedAbilities.length;
                     var matchingAbilities = selectedAbilities.filter(ability => agentDetails.ability.includes(ability)).length;
 
-                    distance += weights.playstyle * (playstyle === agentDetails.playstyle ? 0 : 1);
-                    distance += weights.role * (role === agentDetails.role ? 0 : 1);
-                    distance += weights.primaryWeapon * (primaryWeapon === agentDetails.primaryWeapon ? 0 : 1);
-                    distance += weights.secondaryWeapon * (secondaryWeapon === agentDetails.secondaryWeapon ? 0 : 1);
-                    distance += weights.ability * (selectedAbilities.length - matchingAbilities);
-                    distance += weights.teamSupport * (teamSupport === agentDetails.teamSupport ? 0 : 1);
-                    distance += weights.skillFloor * (skillFloor === agentDetails.skillFloor ? 0 : 1);
-                    distance += weights.mobility * (mobility === agentDetails.mobility ? 0 : 1);
-                    distance += weights.playmaking * (playmaking === agentDetails.playmaking ? 0 : 1);
+                    // Calculate points based on matching abilities and non-checkbox selections
+                    points += (matchingAbilities / totalAbilities) || 0;
+                    points += (playstyle === agentDetails.playstyle ? 1 : 0);
+                    points += (role === agentDetails.role ? 1 : 0);
+                    points += (primaryWeapon === agentDetails.primaryWeapon ? 1 : 0);
+                    points += (secondaryWeapon === agentDetails.secondaryWeapon ? 1 : 0);
+                    points += (teamSupport === agentDetails.teamSupport ? 1 : 0);
+                    points += (skillFloor === agentDetails.skillFloor ? 1 : 0);
+                    points += (mobility === agentDetails.mobility ? 1 : 0);
+                    points += (playmaking === agentDetails.playmaking ? 1 : 0);
 
-                    var matchPercentage = Math.round(((totalWeight - distance) / totalWeight) * 100);
+                    var matchPercentage = Math.round((points / 9) * 100); // Total number of selection criteria
 
                     if (matchPercentage > highestMatchPercentage) {
-                        highestMatchAgent = agent;
-                        highestMatchPercentage = matchPercentage;
+                    highestMatchAgent = agent;
+                    highestMatchPercentage = matchPercentage;
                     }
                 }
 
@@ -506,7 +508,11 @@
                     noResultText.textContent = "No suitable agent found.";
                     resultDiv.appendChild(noResultText);
                 }
-            }
+                }
+        </script>
+    </body>
+
+</html>
         </script>
     </body>
 
