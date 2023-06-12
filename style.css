@@ -7,7 +7,7 @@ body {
   font-weight: bold;
   text-align: center;
   background-color: rgb(121, 167, 211);
-  overflow: hidden; /* Added overflow property */
+  overflow: hidden;
 }
 
 .container {
@@ -22,7 +22,7 @@ body {
   flex-direction: column;
   gap: 1vw;
   align-items: center;
-  overflow: auto; /* Added overflow property */
+  overflow: auto;
 }
 
 h2 {
@@ -81,7 +81,7 @@ button:hover {
   border: 1px solid #375275;
   border-radius: 4px;
   flex-direction: column;
-  overflow: auto; /* Added overflow property */
+  overflow: auto;
 }
 
 .result-heading {
@@ -97,5 +97,5 @@ button:hover {
 #ability {
   display: flex;
   flex-direction: row;
-  overflow: auto; /* Added overflow property */
+  overflow: auto;
 }
