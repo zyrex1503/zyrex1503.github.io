@@ -269,7 +269,7 @@ function recommendAgent() {
     return;
     }
 
-    var matchPercentages = {}; // Object to store match percentages for each agent
+    var matchPercentages = {};
 
     for (var agent in agentData) {
     var agentDetails = agentData[agent];
@@ -277,7 +277,7 @@ function recommendAgent() {
     var totalAbilities = selectedAbilities.length;
     var matchingAbilities = selectedAbilities.filter(ability => agentDetails.ability.includes(ability)).length;
 
-    // Calculate points based on matching abilities and non-checkbox selections
+  
     points += matchingAbilities / totalAbilities || 0;
     points += playstyle === agentDetails.playstyle ? 1 : 0;
     points += role === agentDetails.role ? 1 : 0;
@@ -288,12 +288,10 @@ function recommendAgent() {
     points += mobility === agentDetails.mobility ? 1 : 0;
     points += playmaking === agentDetails.playmaking ? 1 : 0;
 
-    var matchPercentage = Math.round((points / 9) * 100); // Total number of selection criteria
-
-    matchPercentages[agent] = matchPercentage; // Store the match percentage for the agent
+    var matchPercentage = Math.round((points / 9) * 100);
+    matchPercentages[agent] = matchPercentage;
     }
 
-    // Find the highest match percentage and corresponding agent
     var highestMatchAgent = null;
     var highestMatchPercentage = 0;
 
@@ -323,7 +321,7 @@ function recommendAgent() {
     descriptionText.textContent = agentData[highestMatchAgent].description;
     resultDiv.appendChild(descriptionText);
 
-    // Show second and third best matches
+
     showMatches(matchPercentages, highestMatchAgent);
     } else {
     var noResultText = document.createElement("p");
@@ -345,17 +343,17 @@ function showMatches(matchPercentages, highestMatchAgent) {
     matchesHeading.textContent = "Next Matches:";
     matchesDiv.appendChild(matchesHeading);
 
-    // Sort the match percentages in descending order
+
     var sortedMatches = Object.entries(matchPercentages).sort((a, b) => b[1] - a[1]);
 
-    var count = 0; // Counter for the number of matches displayed
+    var count = 0;
 
     for (var i = 0; i < sortedMatches.length; i++) {
         var agent = sortedMatches[i][0];
         var matchPercentage = sortedMatches[i][1];
 
         if (count >= 3) {
-        break; // Exit the loop if the desired number of matches is reached
+        break;
         }
 
         if (agent !== highestMatchAgent) {
