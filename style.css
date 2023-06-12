@@ -6,17 +6,17 @@ body {
     font-family: Arial, sans-serif;
     font-weight: bold;
     text-align: center;
-    background-color: rgb(240, 224, 212);
+    background-color: rgb(121, 167, 211);
 }
 
 .container {
-    max-width: 50vw;
+    max-width: 55vw;
     height: 80vh;
     margin: 10vh auto;
-    background-color: #f3ede9;
-    box-shadow: 0px 0px 100px -50px rgba(255, 0, 0, 0.5);
+    background-color: #375275;
+    box-shadow: 0px 0px 100px -50px rgba(178, 182, 126, 0.5);
     border-radius: 5px;
-    border-color: #333;
+    border-color: #202020;
     display: flex;
     flex-direction: column;
     gap: 1vw;
@@ -41,7 +41,7 @@ label {
 
 
 select {
-    width: 80%;
+    width: 78%;
     padding: 10px;
     border: none;
     border-radius: 4px;
@@ -53,7 +53,7 @@ select {
     text-align: center;
 }
 select:hover{
-    background-color: #333;
+    background-color: #ebe8e8;
     transition: 100ms;
 }
 
@@ -61,7 +61,7 @@ button {
     margin-top: 20px;
     width: 80%;
     padding: 10px;
-    background-color: #572323;
+    background-color: #6b8edb;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -71,7 +71,7 @@ button {
 }
 
 button:hover {
-    background-color: #a86666;
+    background-color: #303f5f;
     transition: 100ms;
 }
 
