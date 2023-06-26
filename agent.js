@@ -253,6 +253,10 @@ var weights = {
     "playmaking": 1,
 };
 
+function gotostatus() {
+      window.location.href = "valstatus.html";
+    }
+
 function recommendAgent() {
     const playstyle = document.getElementById("playstyle").value;
     const role = document.getElementById("role").value;
