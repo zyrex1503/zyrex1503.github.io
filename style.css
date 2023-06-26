@@ -24,6 +24,21 @@ body {
   align-items: center;
   overflow: auto;
 }
+ .custom-button {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      padding: 10px 20px;
+      background-color: #f7f7f7;
+      color: #333;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .custom-button:hover {
+      background-color: #e0e0e0;
 
 h2 {
   text-align: center;
