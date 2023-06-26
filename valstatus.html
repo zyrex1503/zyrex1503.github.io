@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Valorant Status</title>
+  <style>
+    #status {
+      font-weight: bold;
+    }
+
+    #last-updated {
+      color: gray;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Valorant Status</h1>
+  <p id="status"></p>
+  <p id="last-updated"></p>
+
+  <button onclick="goToIndex()">Go back to Index</button>
+
+  <script src="script.js"></script>
+  <script>
+    function goToIndex() {
+      window.location.href = "index.html";
+    }
+
+    function getStatus() {
+  fetch('https://api.henrikdev.xyz/valorant/v1/status/eu')
+    .then(response => response.json())
+    .then(data => {
+      if (data.data.incidents.length > 0 && data.data.incidents[0].updates.length > 0) {
+        const update = data.data.incidents[0].updates[0];
+        const content = update.translations[0].content;
+        const createdAt = update.created_at;
+
+        document.getElementById('status').textContent = content;
+        document.getElementById('last-updated').textContent = 'Last updated: ' + createdAt;
+      }
+    })
+    .catch(error => console.log('Error:', error));
+}
+
+getStatus(); // Initial call
+
+setInterval(getStatus, 180000); // Call every 3 minutes (180,000 milliseconds)
+  </script>
+</body>
+</html>
