@@ -33,16 +33,14 @@ body {
 }
 
 .custom-button {
-  margin-top: 20px;
-  padding: 10px;
-  background-color: #ff0000;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+  margin: 0;
+  transform: none;
 }
+
 
 .custom-button:hover {
   background-color: #990000;
