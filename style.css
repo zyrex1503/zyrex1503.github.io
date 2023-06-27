@@ -6,7 +6,7 @@ body {
   font-family: Arial, sans-serif;
   font-weight: bold;
   text-align: center;
-  background-color: rgb(121, 167, 211);
+  background-color: #375275;
   overflow: hidden;
 }
 
@@ -14,7 +14,7 @@ body {
   max-width: 42vw;
   height: 65vh;
   margin: 10vh auto;
-  background-color: #375275;
+  background-color: rgb(101, 150, 196);
   box-shadow: 0px 0px 100px -50px rgba(178, 182, 126, 0.5);
   border-radius: 5px;
   border-color: #202020;
@@ -60,7 +60,7 @@ button {
   margin-top: 20px;
   width: 78%;
   padding: 10px;
-  background-color: #6b8edb;
+  background-color: #3a4f7c;
   color: #fff;
   border: none;
   border-radius: 4px;
