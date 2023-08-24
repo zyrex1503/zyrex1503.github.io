@@ -131,6 +131,18 @@ var agentData = {
         "playmaking": "yes",
         "description": "KAY/O is a disruptive initiator who specializes in neutralizing enemy abilities and opening up opportunities for his team. Armed with a rifle as his primary weapon, he is effective in medium to long-range engagements. KAY/O also carries a classic for close-quarters combat. His abilities revolve around suppression and flash, allowing him to throw a suppression blade that disables enemy abilities in its area of effect and deploy a flash grenade that temporarily blinds opponents. Additionally, his ultimate ability empowers him with an explosive blast that suppresses enemies caught in its range and prevents them from using abilities. KAY/O's playstyle is disruptive, as he excels at neutralizing enemy utility and creating windows of opportunity for his team. His ability to suppress and disable opponents makes him a strong choice for countering agent abilities and denying enemy strategies. Players who enjoy disrupting the enemy team and making impactful plays will find KAY/O to be a valuable addition to their team."
     },
+    "Killjoy": {
+        "playstyle": "defensive",
+        "role": "sentinel",
+        "primaryWeapon": "rifle",
+        "secondaryWeapon": ["sheriff", "classic", "ghost"],
+        "ability": ["area-denial", "recon"],
+        "teamSupport": "yes",
+        "skillFloor": "medium",
+        "mobility": "low",
+        "playmaking": "no",
+        "description": "test"
+    },
     "Neon": {
         "playstyle": "aggressive",
         "role": "duelist",
