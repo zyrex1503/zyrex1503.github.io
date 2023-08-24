@@ -59,6 +59,18 @@ var agentData = {
         "playmaking": "yes",
         "description": "Cypher is a sentinel who specializes in surveillance and information gathering, providing valuable intel to his team. With a rifle as his primary weapon, he can engage enemies effectively at medium to long range. Cypher is also skilled with classics for close-quarters combat. His abilities revolve around surveillance, allowing him to set up cameras to watch enemy movements, place tripwires to detect enemies, and even catch enemies in a trap with his ultimate ability. Cypher's playstyle is defensive, as he excels at holding positions and providing valuable information to his team. Players who enjoy a strategic and information-oriented role will find Cypher to be an invaluable asset."
     },
+    "Deadlock": {
+        "playstyle": "defensive",
+        "role": "sentinel",
+        "primaryWeapon": "rifle",
+        "secondaryWeapon": ["sheriff", "classic", "ghost"],
+        "ability": ["area-denial", "disruption"],
+        "teamSupport": "yes",
+        "skillFloor": "medium",
+        "mobility": "low",
+        "playmaking": "no",
+        "description": "test"
+    },
     "Fade": {
         "playstyle": "supportive",
         "role": "initiator",
@@ -184,7 +196,7 @@ var agentData = {
         "role": "sentinel",
         "primaryWeapon": ["sheriff", "classic", "ghost"],
         "secondaryWeapon": "classic",
-        "ability": ["healing"],
+        "ability": ["healing", "area-denial"],
         "teamSupport": "yes",
         "skillFloor": "low",
         "mobility": "medium",
