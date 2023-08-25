@@ -11,9 +11,8 @@ body {
 }
 
 .container {
-  width: 90vw; /* Adjust as needed */
-  max-width: 500px; /* Set a maximum width to avoid excessive stretching */
-  height: auto; /* Content will determine height */
+  max-width: 500px; 
+  height: auto; 
   margin: 5vh auto; /* Adjust as needed */
   background-color: rgb(101, 150, 196);
   box-shadow: 0px 0px 100px -50px rgba(178, 182, 126, 0.5);
@@ -23,7 +22,6 @@ body {
   flex-direction: column;
   gap: 1vw;
   align-items: center;
-  /* Remove overflow: auto; */
 }
 
 h2 {
@@ -40,7 +38,7 @@ label {
 }
 
 select {
-  width: 78%;
+  width: 58%;
   padding: 10px;
   border: none;
   border-radius: 4px;
