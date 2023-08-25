@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Valorant EU Server Status</title>
   <style>
@@ -16,7 +17,7 @@
     }
 
     #last-updated {
-      color: gray;
+      color: rgb(73, 73, 73);
       font-size: 14px;
     }
 
@@ -36,6 +37,7 @@
     }
   </style>
 </head>
+
 <body>
   <h1>Valorant EU Server Status</h1>
   <p id="status"></p>
@@ -45,7 +47,8 @@
 
   <script src="script.js"></script>
   <script>
-    /* Your existing functions here */
+
+    let lastFetchedTime = new Date(); // Initialize with the current time
 
     function getStatus() {
       fetch('https://api.henrikdev.xyz/valorant/v1/status/eu')
@@ -54,21 +57,26 @@
           if (data.data.incidents.length > 0 && data.data.incidents[0].updates.length > 0) {
             const update = data.data.incidents[0].updates[0];
             const content = update.translations[0].content;
-            const createdAt = new Date(update.created_at).toLocaleString();
 
             document.getElementById('status').textContent = content;
-            document.getElementById('last-updated').textContent = 'Last updated: ' + createdAt;
           } else {
             document.getElementById('status').textContent = 'Valorant has no issues.';
-            document.getElementById('last-updated').textContent = '';
           }
+
+          lastFetchedTime = new Date();
+          updateLastUpdated();
         })
         .catch(error => console.log('Error:', error));
     }
 
-    getStatus();
+    function updateLastUpdated() {
+      const formattedTime = lastFetchedTime.toLocaleString();
+      document.getElementById('last-updated').textContent = 'Last updated: ' + formattedTime;
+    }
 
+    getStatus();
     setInterval(getStatus, 180000);
   </script>
 </body>
+
 </html>
