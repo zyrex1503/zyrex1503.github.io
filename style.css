@@ -11,8 +11,8 @@ body {
 }
 
 .container {
-  max-width: 42vw;
-  height: 65vh;
+  width: 42vw; /* Change max-width to width */
+  max-height: 95vh; /* Change height to max-height */
   margin: 10vh auto;
   background-color: rgb(101, 150, 196);
   box-shadow: 0px 0px 100px -50px rgba(178, 182, 126, 0.5);
@@ -22,8 +22,9 @@ body {
   flex-direction: column;
   gap: 1vw;
   align-items: center;
-  overflow: hidden;
+  overflow: hidden; 
 }
+
 
 h2 {
   text-align: center;
