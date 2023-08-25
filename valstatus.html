@@ -45,9 +45,7 @@
 
   <script src="script.js"></script>
   <script>
-    function goToIndex() {
-      window.location.href = "index.html";
-    }
+    /* Your existing functions here */
 
     function getStatus() {
       fetch('https://api.henrikdev.xyz/valorant/v1/status/eu')
@@ -60,14 +58,17 @@
 
             document.getElementById('status').textContent = content;
             document.getElementById('last-updated').textContent = 'Last updated: ' + createdAt;
+          } else {
+            document.getElementById('status').textContent = 'Valorant has no issues.';
+            document.getElementById('last-updated').textContent = '';
           }
         })
         .catch(error => console.log('Error:', error));
     }
 
-    getStatus(); // Initial call
+    getStatus();
 
-    setInterval(getStatus, 180000); // Call every 3 minutes (180,000 milliseconds)
+    setInterval(getStatus, 180000);
   </script>
 </body>
 </html>
