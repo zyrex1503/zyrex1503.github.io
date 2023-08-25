@@ -1,5 +1,4 @@
-:root {
-}
+
 
 body {
   font-family: Arial, sans-serif;
@@ -74,11 +73,11 @@ button:hover {
 }
 
 #result {
-  margin-top: 30px;
+  margin-top: -12px;
   padding: 20px;
-  background-color: #375275;
+  background-color: #2e5f9f;
   border: 1px solid #375275;
-  border-radius: 4px;
+  border-radius: 15px;
   flex-direction: column;
   overflow: auto;
 }
