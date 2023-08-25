@@ -21,7 +21,7 @@ var agentData = {
         "skillFloor": "medium",
         "mobility": "medium",
         "playmaking": "yes",
-        "description": "Breach is an initiator who can disrupt enemy positions with powerful seismic blasts and flashes, opening up opportunities for his team."
+        "description": "Breach is an impactful initiator who excels at destabilizing foes and creating opportunities for his team. His abilities are built around disruption and stunning effects, enabling him to breach enemy defenses and set the stage for successful engagements.Breach's toolkit includes Fault Line, a seismic blast that travels through terrain, concussing and knocking up any enemies hit. Aftershock sends a series of powerful tremors through the ground, damaging and displacing foes. His signature ability, Flashpoint, is a blinding charge that, upon activation, blinds any looking at it within its line of sight.His ultimate, Rolling Thunder, is a force to be reckoned with. Upon casting, it emits a powerful quake that dazes and knocks up all caught in its radius, leaving enemies vulnerable to follow-up attacks.Breach's playstyle revolves around calculated disruption and strategic initiation. His ability to breach obstacles and leave enemies incapacitated paves the way for his team's success. Players who value precise timing, team coordination, and setting up impactful plays will find Breach to be an invaluable asset in their pursuit of victory."
     },
     "Brimstone": {
         "playstyle": "defensive",
@@ -45,7 +45,7 @@ var agentData = {
         "skillFloor": "medium",
         "mobility": "high",
         "playmaking": "yes",
-        "description": "test"
+        "description": "Chamber is a sentinel who has the ability to tp himself to a teleport anchor. He also has a sheriff as an Ability and a one shot sniper as an ult. "
     },
     "Cypher": {
         "playstyle": "defensive",
@@ -57,7 +57,7 @@ var agentData = {
         "skillFloor": "medium",
         "mobility": "low",
         "playmaking": "yes",
-        "description": "Cypher is a sentinel who specializes in surveillance and information gathering, providing valuable intel to his team. With a rifle as his primary weapon, he can engage enemies effectively at medium to long range. Cypher is also skilled with classics for close-quarters combat. His abilities revolve around surveillance, allowing him to set up cameras to watch enemy movements, place tripwires to detect enemies, and even catch enemies in a trap with his ultimate ability. Cypher's playstyle is defensive, as he excels at holding positions and providing valuable information to his team. Players who enjoy a strategic and information-oriented role will find Cypher to be an invaluable asset."
+        "description": "Cypher is a sentinel who specializes in surveillance and information gathering, providing valuable intel to his team. His abilities revolve around surveillance, allowing him to set up cameras to watch enemy movements, place tripwires to detect enemies, and even catch enemies in a trap with his ultimate ability. Cypher's playstyle is defensive, as he excels at holding positions and providing valuable information to his team. Players who enjoy a strategic and information-oriented role will find Cypher to be an invaluable asset."
     },
     "Deadlock": {
         "playstyle": "defensive",
@@ -81,7 +81,7 @@ var agentData = {
         "skillFloor": "medium",
         "mobility": "medium",
         "playmaking": "no",
-        "description": "test",
+        "description": "Fade is an Initiator which can reve",
     },
     "Harbor": {
         "playstyle": "supportive",
@@ -117,7 +117,7 @@ var agentData = {
         "skillFloor": "low",
         "mobility": "high",
         "playmaking": "yes",
-        "description": "Jett is a duelist with unparalleled mobility, allowing her to dash through the battlefield and take aggressive engagements."
+        "description": "Jett is an agile duelist known for her swift and aggressive playstyle. Her unique abilities harness her speed and precision to outmaneuver enemies and secure eliminations. She thrives in high-tempo engagements and excels at creating chaos in the enemy ranks.Jett's toolkit includes Cloudburst, which allows her to throw projectile clouds, obscuring vision and providing opportunities for evasive maneuvers. Updraft enables quick vertical repositioning, catching foes off-guard. Her ultimate ability, Blade Storm, equips her with deadly throwing knives, granting her the ability to eliminate opponents with precision.Jett's playstyle revolves around aggressive flanks, rapid peeks, and unpredictable movement. Her exceptional speed and mobility make her a formidable adversary in one-on-one duels. Players who enjoy quick decision-making, acrobatic engagements, and taking risks to reap rewards will find Jett to be an invaluable asset to any team."
     },
     "KAY/O": {
         "playstyle": "aggressive",
@@ -129,7 +129,7 @@ var agentData = {
         "skillFloor": "medium",
         "mobility": "medium",
         "playmaking": "yes",
-        "description": "KAY/O is a disruptive initiator who specializes in neutralizing enemy abilities and opening up opportunities for his team. Armed with a rifle as his primary weapon, he is effective in medium to long-range engagements. KAY/O also carries a classic for close-quarters combat. His abilities revolve around suppression and flash, allowing him to throw a suppression blade that disables enemy abilities in its area of effect and deploy a flash grenade that temporarily blinds opponents. Additionally, his ultimate ability empowers him with an explosive blast that suppresses enemies caught in its range and prevents them from using abilities. KAY/O's playstyle is disruptive, as he excels at neutralizing enemy utility and creating windows of opportunity for his team. His ability to suppress and disable opponents makes him a strong choice for countering agent abilities and denying enemy strategies. Players who enjoy disrupting the enemy team and making impactful plays will find KAY/O to be a valuable addition to their team."
+        "description": "KAY/O is a disruptive initiator who specializes in neutralizing enemy abilities and opening up opportunities for his team. His abilities revolve around suppression and flash, allowing him to throw a suppression blade that disables enemy abilities in its area of effect and deploy a flash grenade that temporarily blinds opponents. Additionally, his ultimate ability empowers him with an explosive blast that suppresses enemies caught in its range and prevents them from using abilities. KAY/O's playstyle is disruptive, as he excels at neutralizing enemy utility and creating windows of opportunity for his team. His ability to suppress and disable opponents makes him a strong choice for countering agent abilities and denying enemy strategies. Players who enjoy disrupting the enemy team and making impactful plays will find KAY/O to be a valuable addition to their team."
     },
     "Killjoy": {
         "playstyle": "defensive",
@@ -141,7 +141,7 @@ var agentData = {
         "skillFloor": "medium",
         "mobility": "low",
         "playmaking": "no",
-        "description": "test"
+        "description": "Killjoy is a strategic sentinel specializing in area denial and tactical control. Her unique abilities make her a master of restricting enemy movement and dictating engagements. Her kit centers on devices that curtail foes' actions, granting her team a vital edge.Killjoy's arsenal includes Alarmbots—exploding bots that chase and damage enemies, disrupting their plans. Nanoswarms create no-go zones, dealing ongoing damage to those within. Her turret adds constant pressure on opponents.The game-changing Lockdown ultimate shines. Deployed with a brief wind-up, it detains caught foes, leaving them exposed for elimination. Killjoy's style is meticulous, securing key areas and disrupting enemies. Denying access and gathering data give her team the upper hand. For players valuing strategy, controlled environments, and outsmarting rivals, Killjoy is the ultimate ally."
     },
     "Neon": {
         "playstyle": "aggressive",
@@ -189,7 +189,7 @@ var agentData = {
         "skillFloor": "medium",
         "mobility": "high",
         "playmaking": "yes",
-        "description": "Raze is an aggressive duelist who excels at causing chaos and dealing explosive damage on the battlefield. Armed with a rifle as her primary weapon, she can engage enemies effectively at medium to long range. Raze also carries a classic for close-quarters combat. Her abilities revolve around explosives and mobility, allowing her to launch explosive packs, throw cluster grenades, and deploy a powerful rocket launcher. Additionally, she can use her blast pack to propel herself through the air and gain vertical advantage. Raze's playstyle is highly aggressive, as she can create devastating explosions to clear out enemies or force them into unfavorable positions. Her mobility skills also make her a versatile agent for flanking and taking aggressive engagements. Players who enjoy high-octane gameplay and causing chaos among the enemy team will find Raze to be an explosive force to be reckoned with."
+        "description": "Raze is an aggressive duelist who excels at causing chaos and dealing explosive damage on the battlefield. Her abilities revolve around explosives and mobility, allowing her to launch explosive packs, throw cluster grenades, and deploy a powerful rocket launcher (that never makes damage :P). Additionally, she can use her blast pack to propel herself through the air and gain vertical advantage. Raze's playstyle is highly aggressive, as she can create devastating explosions to clear out enemies or force them into unfavorable positions. Her mobility skills also make her a versatile agent for flanking and taking aggressive engagements. Players who enjoy high-octane gameplay and causing chaos among the enemy team will find Raze to be an explosive force to be reckoned with."
     },
     "Reyna": {
         "playstyle": "aggressive",
