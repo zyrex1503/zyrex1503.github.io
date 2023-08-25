@@ -42,13 +42,19 @@
   <h1>Valorant EU Server Status</h1>
   <p id="status"></p>
   <p id="last-updated"></p>
+  
 
-  <button onclick="goToIndex()">Go back to the Valorant Agent Recommender</button>
 
-  <script src="script.js"></script>
+  <button onclick="goToZyrex()">Go back to the Valorant Agent Recommender</button>
+
   <script>
 
-    let lastFetchedTime = new Date(); // Initialize with the current time
+    function goToZyrex() {
+         window.location.href = 'https://zyrex.live';
+      }
+
+
+    let lastFetchedTime = new Date();
 
     function getStatus() {
       fetch('https://api.henrikdev.xyz/valorant/v1/status/eu')
