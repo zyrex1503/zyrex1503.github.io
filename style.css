@@ -7,7 +7,7 @@ body {
   font-weight: bold;
   text-align: center;
   background-color: #375275;
-  overflow: hidden;
+  margin: 0; /* Add this line to remove default margin */
 }
 
 .container {
@@ -22,7 +22,7 @@ body {
   flex-direction: column;
   gap: 1vw;
   align-items: center;
-  overflow: auto;
+  overflow: hidden;
 }
 
 h2 {
